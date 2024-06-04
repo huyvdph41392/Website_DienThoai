@@ -1,0 +1,294 @@
+{
+  "danh-muc": [
+    {
+      "id": "DM01",
+      "tenDanhMuc": "Iphone"
+    },
+    {
+      "id": "DM02",
+      "tenDanhMuc": "SamSung"
+    },
+    {
+      "id": "DM03",
+      "tenDanhMuc": "XiaoMi"
+    },
+    {
+      "id": "DM04",
+      "tenDanhMuc": "ReadMi"
+    }
+  ],
+  "san-pham": [
+    {
+      "id": "SP01",
+      "tenSanPham": "Iphone 15 Pro Max 528gb",
+      "anhSanPham": "/img/ip2.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "Iphone",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM01"
+    },
+    {
+      "id": "SP02",
+      "tenSanPham": "Iphone 15 Pro Max 528gb",
+      "anhSanPham": "/img/ip3.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "Iphone",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM01"
+    },
+    {
+      "id": "SP03",
+      "tenSanPham": "Iphone 15 Pro Max 528gb",
+      "anhSanPham": "/img/ip4.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "Iphone",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM01"
+    },
+    {
+      "id": "SP04",
+      "tenSanPham": "Iphone 15 Pro Max 528gb",
+      "anhSanPham": "/img/ip5.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "Iphone",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM01"
+    },
+    {
+      "id": "SP05",
+      "tenSanPham": "SamSung GALAXY S25 Ultra",
+      "anhSanPham": "/img/ss1.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "SamSung",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM02"
+    },
+    {
+      "id": "SP06",
+      "tenSanPham": "SamSung GALAXY S25 Ultra",
+      "anhSanPham": "/img/ss2.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "SamSung",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM02"
+    },
+    {
+      "id": "SP07",
+      "tenSanPham": "SamSung GALAXY S25 Ultra",
+      "anhSanPham": "/img/ss3.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "SamSung",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM02"
+    },
+    {
+      "id": "SP08",
+      "tenSanPham": "SamSung GALAXY S25 Ultra",
+      "anhSanPham": "/img/ss4.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "SamSung",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM02"
+    },
+    {
+      "id": "SP09",
+      "tenSanPham": "XiaoMi X25T Pro Max",
+      "anhSanPham": "/img/xm1.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "XiaoMi",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM03"
+    },
+    {
+      "id": "SP10",
+      "tenSanPham": "XiaoMi X25T Pro Max",
+      "anhSanPham": "/img/xm2.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "XiaoMi",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM03"
+    },
+    {
+      "id": "SP11",
+      "tenSanPham": "XiaoMi X25T Pro Max",
+      "anhSanPham": "/img/xm3.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "XiaoMi",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM03"
+    },
+    {
+      "id": "SP12",
+      "tenSanPham": "XiaoMi X25T Pro Max",
+      "anhSanPham": "/img/xm4.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "XiaoMi",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM03"
+    },
+    {
+      "id": "SP13",
+      "tenSanPham": "ReadMi K90 Pro Max",
+      "anhSanPham": "/img/rm1.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "ReadMi",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM04"
+    },
+    {
+      "id": "SP14",
+      "tenSanPham": "ReadMi K90 Pro Max",
+      "anhSanPham": "/img/rm2.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "ReadMi",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM04"
+    },
+    {
+      "id": "SP15",
+      "tenSanPham": "ReadMi K90 Pro Max",
+      "anhSanPham": "/img/rm3.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "ReadMi",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM04"
+    },
+    {
+      "id": "SP16",
+      "tenSanPham": "ReadMi K90 Pro Max",
+      "anhSanPham": "/img/rm4.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "ReadMi",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM04"
+    }
+  ],
+  "gio-hang": [
+    {
+      "id": "SP05",
+      "tenSanPham": "SamSung GALAXY S25 Ultra",
+      "anhSanPham": "/img/ss1.1.jpeg",
+      "giaBan": "32,990,000đ",
+      "giaGoc": "35,990,000đ",
+      "soLuong": "20",
+      "tenDanhMuc": "SamSung",
+      "moTa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "idDanhMuc": "DM02"
+    }
+  ],
+  "don-hang": [
+    {
+      "id": "DH01",
+      "tenKhachHang": "Nguyễn Văn A",
+      "soDienThoai": "0989868686",
+      "diaChi": "Số 12, Hoàng Mai, Hà Nội",
+      "ngayDatHang": "2024-03-14",
+      "tenSanPham": "Iphone 15 Pro Max 528gb",
+      "anhSanPham": "/img/ip5.1.jpeg",
+      "soLuong": "1",
+      "tongTien": "32,990,000đ",
+      "ghiChu": "Giao nhanh cho tôi",
+      "trangThaiDonHang": "Chờ xác nhận"
+    },
+    {
+      "id": "DH02",
+      "tenKhachHang": "Nguyễn Bá B",
+      "soDienThoai": "0989999999",
+      "diaChi": "Số 12, Thanh Xuân, Hà Nội",
+      "ngayDatHang": "2024-03-14",
+      "tenSanPham": "Iphone 15 Pro Max 528gb",
+      "anhSanPham": "/img/ip5.1.jpeg",
+      "soLuong": "1",
+      "tongTien": "32,990,000đ",
+      "ghiChu": "Giao nhanh cho tôi",
+      "trangThaiDonHang": "Đang giao hàng"
+    },
+    {
+      "id": "",
+      "email": "huyvdph41392@gmail.com",
+      "ngayDatHang": "",
+      "tenSanPham": "",
+      "anhSanPham": "",
+      "soLuong": "",
+      "tongTien": "",
+      "ghiChu": "sfagr3y5",
+      "trangThaiDonHang": ""
+    },
+    {
+      "id": "",
+      "tenKhachHang": "huyvdph13@gmail.com",
+      "email": "huyvdph13@gmail.com",
+      "ngayDatHang": "",
+      "tenSanPham": "",
+      "anhSanPham": "",
+      "soLuong": "",
+      "tongTien": "",
+      "ghiChu": "wqeagshfn",
+      "trangThaiDonHang": ""
+    }
+  ],
+  "tai-khoan": [
+    {
+      "id": "TK01",
+      "username": "huyvdph41392@fpt.edu.vn",
+      "password": "123456",
+      "vaiTro": "admin"
+    },
+    {
+      "id": "TK02",
+      "username": "huyvien180104@gmail.com",
+      "password": "123456",
+      "vaiTro": "user"
+    },
+    {
+      "id": "",
+      "username": "admin123@gmail.com",
+      "password": "123456",
+      "vaiTro": ""
+    },
+    {
+      "id": "",
+      "username": "admin2@gmail.com",
+      "password": "123456",
+      "vaiTro": ""
+    },
+    {
+      "id": "",
+      "username": "admin2@gmail.com",
+      "password": "123456",
+      "vaiTro": ""
+    }
+  ]
+}

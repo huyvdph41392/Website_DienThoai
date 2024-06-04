@@ -1,0 +1,118 @@
+<div class="row mt-4">
+    <div class="col-6 text-center">
+        <input type="hidden" ng-model="sanPhamChiTiet.idDanhMuc">
+        <div class="border rounded-2 bg-light">
+            <img ng-src="{{sanPhamChiTiet.anhSanPham}}" alt="" style="width: 580px;">
+        </div>
+        <div>
+            <img ng-src="{{sanPhamChiTiet.anhSanPham}}" alt="" style="width: 100px;">
+            <img ng-src="{{sanPhamChiTiet.anhSanPham}}" alt="" style="width: 100px;">
+            <img ng-src="{{sanPhamChiTiet.anhSanPham}}" alt="" style="width: 100px;">
+            <img ng-src="{{sanPhamChiTiet.anhSanPham}}" alt="" style="width: 100px;">
+            <img ng-src="{{sanPhamChiTiet.anhSanPham}}" alt="" style="width: 100px;">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="ms-5">
+            <h1 class="h4 mb-3">{{sanPhamChiTiet.tenSanPham}}</h1>
+            <div class="text-warning mb-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <div style="font-size: 22px;">Giá:</div>
+                <div class="text-danger fw-bold ms-4 me-4" style="font-size: 20px;">{{sanPhamChiTiet.giaBan}}</div>
+                <div class="text-decoration-line-through" style="font-size: 15px;">{{sanPhamChiTiet.giaGoc}}</div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <div style="font-size: 22px;">Màu sắc:</div>
+                <div class="form-check ms-4 me-4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Titan
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Đen
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <div style="font-size: 22px;">Ưu đãi đặc biệt</div>
+                <div>
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-circle-check text-success"></i>
+                        <p class="ms-2 mt-2">Đặc quyền 2 năm bảo hành</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-circle-check text-success"></i>
+                        <p class="ms-2 mt-2">Tặng sim Viettel 4G trị giá 200.000đ</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-circle-check text-success"></i>
+                        <p class="ms-2 mt-2">Tặng phiếu mua hàng 100.000đ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex mb-3">
+                <div style="font-size: 22px;" class="me-4">Số lượng:</div>
+                <div class="d-flex align-items-center">
+                    
+                    <input type="number" ng-model="sanPhamChiTiet.soLuong" class="border-1 border-secondary rounded-1 bg-light text-center" style="width: 60px; height: 30px;">
+                    
+                </div>
+            </div>
+            <div class="d-flex mt-5">
+                <a href="" ng-click="onClickThemGioHang()" class="btn btn-danger rounded-pill w-50 me-4" style="font-size: 20px;"><i class="fa-solid fa-cart-shopping me-1"></i>Thêm vào giỏ hàng</a>
+                <button class="btn btn-danger rounded-pill w-50 " style="font-size: 20px;"><i class="fa-regular fa-credit-card me-1"></i>Mua ngay</button>                        
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="text-secondary mt-4 mb-4">
+<div>
+    <h1 class="h5 text-center fw-bold">MÔ TẢ SẢN PHẨM</h1>
+    <p>{{sanPhamChiTiet.moTa}}</p>
+</div>
+<hr class="text-secondary mt-4 mb-4">
+<div>
+    <div class="row">
+        <div class="col-12">
+            <h1 class="h5 text-danger text-center fw-bold">SẢN PHẨM LIÊN QUAN</h1>
+            <div id="demo" class="carousel slide overflow-hidden" data-bs-ride="carousel" style="height: auto;">
+
+                <!-- Indicators/dots -->
+            
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-3" ng-repeat="item in sanPhamLienQuan">
+                                <div class="text-center border rounded-2 pt-2 pb-2">
+                                    <a class="text-decoration-none text-black" href="#!/sanpham/chitiet/{{item.id}}">
+                                        <div class="">
+                                            <img style="width: 300px;" ng-src="{{item.anhSanPham}}" alt="">
+                                        </div>
+                                        <div>
+                                            <h1 class="" style="font-size: 18px; height: 43.2px;">{{item.tenSanPham}}</h1>
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <div class="text-decoration-line-through">{{item.giaGoc}}</div>
+                                                <div class="text-danger fw-bold">{{item.giaBan}}</div>
+                                            </div>
+                                        </div>                                            
+                                    </a>
+                                    <button class="btn btn-danger rounded-pill w-100">Mua ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

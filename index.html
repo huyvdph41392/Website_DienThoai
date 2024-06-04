@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lib/bootstrap.min.css">
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+    <script src="/lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="/lib/angular.min.js"></script>
+    <script src="/lib/angular-route.js"></script>
+    <script>
+        var myApp = angular.module("myApp", ["ngRoute"]);
+        myApp.controller("myCtrl", function($scope, $http) {
+            $scope.danhSachDanhMuc = [];
+            $http({
+                method: "GET",
+                url: "http://localhost:3000/danh-muc"
+            }).then(function(res) {
+                $scope.danhSachDanhMuc = res.data;
+            })
+            $scope.sanPhamGioHang = [];
+            $scope.soLuongGioHang = [];
+
+            $http({
+                method: "GET",
+                url: "http://localhost:3000/gio-hang"
+            }).then(function(res) {
+                $scope.sanPhamGioHang = res.data;
+                $scope.soLuongGioHang = $scope.sanPhamGioHang.length;
+                console.log($scope.soLuongGioHang)
+            })
+        })
+
+        myApp.config(function($routeProvider) {
+            $routeProvider
+            .when("/", {
+                templateUrl: "/user/trangchu.html",
+                controller: "trangChu"
+            })
+            // Route tài khoản
+            .when("/taikhoan/dangnhap", {
+                templateUrl: "/user/taikhoan/dangnhap.html",
+                controller: "dangNhap"
+            })
+            .when("/taikhoan/dangky", {
+                templateUrl: "/user/taikhoan/dangky.html",
+                controller: "dangKy"
+            })
+            // END Route tài khoản
+
+            // Route Sản phẩm
+            .when("/sanpham/danhmuc/:id", {
+                templateUrl: "/user/sanpham/tatca_sp.html",
+                controller: "sanPhamDanhMuc"
+            })
+            .when("/sanpham/chitiet/:id", {
+                templateUrl: "/user/sanpham/chitiet_sp.html",
+                controller: "chiTietSanPham"
+            })
+            // END Route Sản phẩm
+
+            // Route Gio hang
+            .when("/giohang", {
+                templateUrl: "/user/giohang/giohang.html",
+                controller: "gioHang"
+            })
+            .when("/donhang/danhsach", {
+                templateUrl: "/user/giohang/danhsach_dh.html",
+                controller: "danhSachDonHang"
+            })
+            // END Route Gio hang
+
+            // Route Thanh toán
+            .when("/thanhtoan", {
+                templateUrl: "/user/thanhtoan/thanhtoan.html",
+                controller: "thanhToan"
+            })
+            // END Route Thanh toán
+        })
+    </script>
+    <script src="/user/trangchu.js"></script>
+    <!-- Tài khoản -->
+    <script src="/user/taikhoan/dangnhap.js"></script>
+    <script src="/user/taikhoan/dangky.js"></script>
+    <!-- END Tài khoản -->
+
+    <!-- Sản phẩm -->
+    <script src="/user/sanpham/tatca_sp.js"></script>
+    <script src="/user/sanpham/chitiet_sp.js"></script>
+    <!-- END Sản phẩm -->
+    
+    <!-- Gio hang -->
+    <script src="/user/giohang/giohang.js"></script>
+    <script src="/user/giohang/danhsach_dh.js"></script>
+    <!-- END Gio hang -->
+
+    <!-- Thanh toan -->
+    <script src="/user/thanhtoan/thanhtoan.js"></script>
+    <!-- END Thanh toan -->
+    <title>User</title>
+</head>
+<body ng-app="myApp">
+    <nav class="navbar navbar-expand-sm bg-white border-bottom shadow-sm">
+
+        <div class="container" ng-controller="myCtrl">
+          <!-- Logo -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/"><img style="width: 160px;" src="/img/logo_user.png" alt=""></a>
+                </li>
+            </ul>
+            <!-- Menu -->
+            <div class="d-flex flex-column align-items-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Danh mục</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#!/sanpham/danhmuc/:">Tất cả sản phẩm</a></li>
+                            <li ng-repeat="item in danhSachDanhMuc"><a class="dropdown-item" href="#!/sanpham/danhmuc/{{item.id}}">{{item.tenDanhMuc}}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!/">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/tintuc/tintuc.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/gioithieu/goithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!/donhang/danhsach">Lịch sử đơn hàng</a>
+                    </li>
+                </ul>                
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <input class="border-light" type="text" placeholder="Tìm kiếm">
+                    </li>
+                </ul>                
+            </div>
+
+            <ul class="navbar-nav">
+                <li class="nav-item me-1">
+                    <a href="#!/taikhoan/dangnhap" class="btn position-relative"><i class="fa-solid fa-user fa-xl"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!/giohang" class="btn position-relative">
+                        <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                        <span class="badge bg-danger rounded-pill position-absolute" style="top: -6px; right: -14px;">{{soLuongGioHang}}</span>                                   
+                    </a>
+                </li>                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Slider -->
+
+    <div ng-view class="container mt-1" style="min-height: calc(100vh - 138px);">
+
+    </div>
+    <div class="bg-white border-top mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="me-5">
+                    <p class="fw-bold text-black mt-4 mb-4 border-bottom border-2" style="font-size: 18px;">THÔNG TIN</p>
+                    <div class="d-flex flex-column">
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Về chúng tôi</a>
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Thông tin giao hàng</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Điều khoản và điều kiện</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Trung tâm trợ giúp</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Trả lại và hoàn tiền</a>                        
+                    </div>
+                </div>
+                <div class="me-5">
+                    <p class="fw-bold text-black mt-4 mb-4 border-bottom border-2 bo" style="font-size: 18px;">DỊCH VỤ</p>
+                    <div class="d-flex flex-column">
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Tài khoản</a>
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Lịch sử đơn hàng</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Danh sách</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Bản tin</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Liên hệ chúng tôi</a>                        
+                    </div>
+                </div>
+                <div class="me-5">
+                    <p class="fw-bold text-black mt-4 mb-4 border-bottom border-2 bo" style="font-size: 18px;">CHÍNH SÁCH</p>
+                    <div class="d-flex flex-column">
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Chính sách bảo hành</a>
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Chính sách đổi trả</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Chính sách bảo mật</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Chính sách khui hộp</a>                                           
+                    </div>
+                </div>
+                <div class="me-5">
+                    <p class="fw-bold text-black mt-4 mb-4 border-bottom border-2 bo" style="font-size: 18px;">TÀI KHOẢN</p>
+                    <div class="d-flex flex-column">
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Tài khoản của tôi</a>
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Lịch sử đơn hàng</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Thông tin</a>                        
+                        <a class="text-secondary text-decoration-none" style="font-size: 15px;" href="">Tuyển dụng</a>                                           
+                    </div>
+                </div>
+                <div class="me-5">
+                    <p class="fw-bold text-black mt-4 mb-4 border-bottom border-2 bo" style="font-size: 18px;">SOCIAL</p>
+                    <div class="d-flex flex-column">
+                        <a class="text-decoration-none text-black" href=""><i class="fa-brands fa-facebook"></i></a>                                          
+                        <a class="text-decoration-none text-black" href=""><i class="fa-brands fa-twitter"></i></a>                                          
+                        <a class="text-decoration-none text-black" href=""><i class="fa-brands fa-pinterest"></i></a>                                          
+                        <a class="text-decoration-none text-black" href=""><i class="fa-brands fa-instagram"></i></a>                                          
+                        <a class="text-decoration-none text-black" href=""><i class="fa-brands fa-youtube"></i></a>                                          
+                    </div>
+                </div>
+            </div>
+            <div class="text-center border-top border-bottom mt-3">
+                <p class="fw-bold mt-2 mb-4">huyvdph41392@fpt.edu.vn</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

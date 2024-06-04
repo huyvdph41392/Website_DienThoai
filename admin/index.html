@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lib/bootstrap.min.css">
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+    <script src="/lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="/lib/angular.min.js"></script>
+    <script src="/lib/angular-route.js"></script>
+    <script>
+        var myApp = angular.module('myApp', ['ngRoute']);
+        myApp.config(function($routeProvider) {
+            $routeProvider
+            // Route sản phẩm
+            .when("/sanpham/danhsach", {
+                templateUrl: "sanpham/danhsach_sp.html",
+                controller: "danhSachSanPham"
+            })
+            .when("/sanpham/chitiet/:id", {
+                templateUrl: "sanpham/chitiet_sp.html",
+                controller: "chiTietSanPham"
+            })
+            .when("/sanpham/them", {
+                templateUrl: "sanpham/them_sp.html",
+                controller: "themSanPham"
+            })
+            .when("/sanpham/sua/:id", {
+                templateUrl: "sanpham/sua_sp.html",
+                controller: "suaSanPham"
+            })
+            // END Route sản phẩm
+
+            // Route danh mục
+            .when("/danhmuc/danhsach", {
+                templateUrl: "danhmuc/danhsach_dm.html",
+                controller: "danhSachDanhMuc"
+            })
+            .when("/danhmuc/them", {
+                templateUrl: "danhmuc/them_dm.html",
+                controller: "themDanhMuc"
+            })
+            .when("/danhmuc/sua/:id", {
+                templateUrl: "danhmuc/sua_dm.html",
+                controller: "suaDanhMuc"
+            })
+            // END Route danh mục
+
+            // Route đơn hàng
+            .when("/donhang/danhsach", {
+                templateUrl: "donhang/danhsach_dh.html",
+                controller: "danhSachDonHang"
+            })
+            .when("/donhang/sua/:id", {
+                templateUrl: "donhang/sua_dh.html",
+                controller: "suaDonHang"
+            })
+            .when("/donhang/chitiet/:id", {
+                templateUrl: "donhang/chitiet_dh.html",
+                controller: "chiTietDonHang"
+            })
+            // END Route đơn hàng
+        })
+    </script>
+    <!-- Sản phẩm -->
+    <script src="sanpham/danhsach_sp.js"></script>
+    <script src="sanpham/chitiet_sp.js"></script>
+    <script src="sanpham/them_sp.js"></script>
+    <script src="sanpham/sua_sp.js"></script>
+    <!-- END Sản phẩm -->
+
+    <!-- Danh mục -->
+    <script src="danhmuc/danhsach_dm.js"></script>
+    <script src="danhmuc/them_dm.js"></script>
+    <script src="danhmuc/sua_dm.js"></script>
+    <!-- END Danh mục -->
+
+    <!-- Đơn hàng -->
+    <script src="donhang/danhsach_dh.js"></script>
+    <script src="donhang/sua_dh.js"></script>
+    <script src="donhang/chitiet_dh.js"></script>
+    <!-- END Đơn hàng -->
+    <title>Admin</title>
+</head>
+<body ng-app="myApp">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow">
+
+        <div class="container-fluid">
+          <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="trangchu.html"><img src="/img/admin1.png" alt="Avatar Logo" class="rounded-pill" style="width: 45px;"></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Xin Chào "Admin"</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Đăng xuất</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="d-flex">
+        <div class="" style="width: 300px; height: calc(100vh - 77px);">
+            <ul class="navbar-nav ms-3 mt-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>Trang chủ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i class="fa-brands fa-product-hunt me-1"></i>Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#!/sanpham/danhsach">Danh sách</a></li>
+                        <li><a class="dropdown-item" href="#!/sanpham/them">Thêm mới</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i class="fa-solid fa-list me-1"></i>Danh Mục</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#!/danhmuc/danhsach">Danh sách</a></li>
+                        <li><a class="dropdown-item" href="#!/danhmuc/them">Thêm mới</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/donhang/danhsach"><i class="fa-solid fa-truck-fast me-1"></i>Đơn hàng</a>
+                </li>
+            </ul>
+        </div>
+        <div ng-view class="container bg-light" style="width: calc(100% - 300px);">
+            <h3 class="bg-white text-danger d-flex justify-content-center align-items-center mt-2 mb-5" style="height: 85px;">Thống kê</h3>            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<h3 class="bg-white text-danger d-flex justify-content-center align-items-center mt-2 mb-5" style="height: 85px;">Danh sách sản phẩm</h3>            
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Ảnh</th>
+            <th class="text-nowrap">Giá bán</th>
+            <th class="text-nowrap">Danh mục</th>
+            <th class="text-nowrap">Trạng thái</th>
+            <th class="text-nowrap">Mô tả</th>
+            <th class="text-nowrap">Tương tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in danhSachSanPham">
+            <td style="width: 1px;" class="text-nowrap">{{item.id}}</td>
+            <td style="width: 1px;" class="text-nowrap">{{item.tenSanPham}}</td>
+            <td style="width: 1px;" class="text-nowrap">
+                <div class="border rounded bg-light d-flex align-items-center justify-content-center" style="width: 85px; height: 85px;">
+                    <img ng-src="{{item.anhSanPham}}" alt="" style="width: 100%; height: 100%;">
+                </div>
+            </td>
+            <td style="width: 1px;" class="text-nowrap">{{item.giaBan}}</td>
+            <td style="width: 1px;" class="text-nowrap">{{item.tenDanhMuc}}</td>
+            <td style="width: 1px;" class="text-nowrap">
+                <span class="badge bg-success rounded-pill" ng-if="item.soLuong > 0">Còn hàng</span>
+                <span class="badge bg-success rounded-pill" ng-if="item.soLuong <= 0">Hết hàng</span>
+            </td>
+            <td>
+                <p>{{item.moTa}}</p>
+            </td>
+            <td style="width: 1px;" class="text-nowrap">
+                <a class="btn btn-primary btn-sm rounded-1" href="#!/sanpham/chitiet/{{item.id}}"><i class="fa-solid fa-pen-to-square me-1"></i>Chi tiết</a>
+                <a class="btn btn-success btn-sm rounded-1" href="#!/sanpham/sua/{{item.id}}"><i class="fa-solid fa-pen-to-square me-1"></i>Sửa</a>
+                <!-- Button to Open the Modal -->
+                <button ng-click="onClickXoaSanPham(item.id)" type="button" class="btn btn-danger btn-sm rounded-1" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-trash me-1"></i>Xóa</button>
+                
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                    
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Xác nhận xóa</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                    
+                            <!-- Modal body -->
+                            <div class="modal-body">Bạn có chắc muốn xóa sản phẩm có ID là: <strong>{{id}}</strong></div>
+                
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button ng-click="onClickXacNhanXoa()" type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>

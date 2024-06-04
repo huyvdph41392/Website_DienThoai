@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-3">
+        <h1 class="h5 mt-3 mb-3 text-center">BỘ LỌC SẢN PHẨM</h1>
+        <div class="dropdown form-control border-white">
+            <a class="btn btn-light form-control dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Chọn danh mục
+            </a>
+              
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a ng-click="onClickLocSanPham('')" class="dropdown-item">Tất cả danh mục</a></li>
+                <li ng-repeat="item in danhSachDanhMuc"><a ng-click="onClickLocSanPham(item.id)" class="dropdown-item">{{item.tenDanhMuc}}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-9">
+        <h1 class="h5 text-danger mt-3 mb-3 text-center">TẤT CẢ SẢN PHẨM</h1>
+        <div class="row g-lg-2">
+            <div class="col-3" ng-repeat="sanPham in danhSachSanPham">
+                <div class="text-center border rounded-2 p-2">
+                    <a class="text-decoration-none text-black" href="#!/sanpham/chitiet/{{sanPham.id}}">
+                        <div class="">
+                            <img style="width: 200px;" ng-src="{{sanPham.anhSanPham}}" alt="">
+                        </div>
+                        <div>
+                            <h1 class="h6" style="height: 38.4px;">{{sanPham.tenSanPham}}</h1>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <div class="text-decoration-line-through">{{sanPham.giaGoc}}</div>
+                                <div class="text-danger fw-bold">{{sanPham.giaBan}}</div>
+                            </div>
+                        </div>                                            
+                    </a>
+                    <button class="btn btn-danger rounded-pill w-100">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

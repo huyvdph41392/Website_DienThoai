@@ -1,0 +1,38 @@
+<h3 class="bg-white text-danger d-flex justify-content-center align-items-center mt-2 mb-5" style="height: 85px;">Danh sách đơn hàng</h3>            
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th class="text-nowrap">Tên khách hàng</th>
+            <th class="text-nowrap">Ngày đặt</th>
+            <th class="text-nowrap">Tổng tiền</th>
+            <th class="text-nowrap">Ghi chú</th>
+            <th class="text-nowrap">Địa chỉ</th>
+            <th class="text-nowrap">Số điện thoại</th>
+            <th class="text-nowrap">Trạng thái</th>
+            <th class="text-nowrap">Tương tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in danhSachDonHang">
+            <td style="width: 1px;" class="text-nowrap">{{item.id}}</td>
+            <td style="width: 1px;" class="text-nowrap">{{item.tenKhachHang}}</td>
+            <td style="width: 1px;" class="text-nowrap">{{item.ngayDatHang}}</td>
+            <td style="width: 1px;" class="text-nowrap">{{item.tongTien}}</td>
+            <td style="width: 1px;" class="text-nowrap">{{item.ghiChu}}</td>
+            <td style="width: 1px;" class="text-nowrap">{{item.diaChi}}</td>
+            <td style="width: 1px;" class="text-nowrap">{{item.soDienThoai}}</td>
+            <td style="width: 1px;" class="text-nowrap">
+                <select name="" id="" class="border-0" ng-model="item.trangThaiDonHang">
+                    <option value="Chờ xác nhận">Chờ xác nhận</option>
+                    <option value="Đã xác nhận">Đã xác nhận</option>
+                    <option value="Đang giao hàng">Đang giao hàng</option>
+                    <option value="Đã giao hàng">Đã giao hàng</option>
+                </select>
+            </td>
+            <td style="width: 1px;" class="text-nowrap">
+                <a class="btn btn-primary btn-sm rounded-1" href="#!/donhang/chitiet/{{item.id}}"><i class="fa-solid fa-pen-to-square me-1"></i>Chi tiết</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

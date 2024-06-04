@@ -1,0 +1,86 @@
+<div class="text-center mt-5 mb-5">
+    <i class="fa-regular fa-credit-card" style="font-size: 55px;"></i>
+    <h1>Thanh Toán</h1>
+    <p>Vui lòng kiểm tra thông tin khách hàng và thông tin sản phẩm trước khi thanh toán</p>
+</div>
+<div class="row mb-5">
+    <div class="col-8">
+        <form action="">
+            <h1 class="h5 mb-4 border-bottom">Thông tin khách hàng</h1>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Họ Tên</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" ng-model="duLieuDonHang.tenKhachHang">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" ng-model="duLieuDonHang.email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Số Điện Thoại</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" ng-model="duLieuDonHang.soDienThoai">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Địa chỉ</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" ng-model="duLieuDonHang.diaChi">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Ghi Chú</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ng-model="duLieuDonHang.ghiChu"></textarea>
+            </div>
+            <h1 class="h5 mt-4 mb-4 border-top">Hình thức thanh toán</h1>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Tiền mặt
+                <label class="form-check-label" for="radio1"></label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Thẻ tín dụng
+                <label class="form-check-label" for="radio2"></label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Chuyển khoản
+                <label class="form-check-label" for="radio3"></label>
+            </div>
+            <div class="alert alert-danger mt-3" ng-if="formValidate.trangThai === false">
+                <strong>Form không hợp lệ!</strong> 
+                <br>
+                {{formValidate.noiDung}}
+            </div>
+              <button ng-click="onClickThanhToan()" class="btn btn-success mb-5 mt-3 w-100" style="font-size: 18px;"><i class="fa-regular fa-credit-card me-2"></i>Thanh toán</button>
+        </form>
+    </div>
+    <div class="col-4">
+        <h1 class="h5 mb-4 border-bottom">Đơn hàng</h1>
+        <div class="row g-lg-1">
+            <div class="col-12 border border-1 border-secondary-subtle rounded-2" ng-repeat="item in sanPhamGioHang">
+                <div class="row d-flex align-items-center">
+                    <div class="col-3">
+                        <img style="width: 80px;" ng-src="{{item.anhSanPham}}" alt="">
+                    </div>
+                    <div class="col-9">
+                        <div>
+                            <h1 class="h6">{{item.tenSanPham}}</h1>
+                            <div class="text-danger mb-2">{{item.giaBan}}</div>
+                            <p>{{item.soLuong}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 border border-1 border-secondary-subtle rounded-2">
+                <div class="row">
+                    <div class="col-3 text-center">
+                        <p class="fw-bold">Tổng tiền:</p>
+                    </div>
+                    <div class="col-9">
+                        <div class="text-danger mb-2" ng-model="duLieuDonHang.tongTien">131.960.000đ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-group mt-1">
+            <input type="text" class="form-control" placeholder="Mã khuyến mãi">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+</div>

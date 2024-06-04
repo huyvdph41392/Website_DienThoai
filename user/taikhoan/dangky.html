@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center align-items-center pt-5">
+    <form action="" class="w-50 mt-5 bg-light rounded-2 shadow-sm ps-3 pt-3 pe-3 pb-3">
+        <input type="hidden" class="form-control" id="floatingInput" placeholder="name@example.com" ng-model="duLieuTaiKhoan.id">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" ng-model="duLieuTaiKhoan.username">
+            <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" ng-model="duLieuTaiKhoan.password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <input type="hidden" class="form-control" id="floatingInput" placeholder="name@example.com" ng-model="duLieuTaiKhoan.vaiTro">
+        <div class="form-floating d-flex align-items-center justify-content-between">
+            <a class="text-black" href="#!/taikhoan/dangnhap">Quay lại</a>
+            <button ng-click="onClickDangKy()" class="btn btn-primary rounded-2">Đăng ký</button>
+        </div>         
+        <div class="alert alert-danger mt-3" ng-if="formValidate.trangThai === false">
+            <strong>Form không hợp lệ!</strong> 
+            <br>
+            {{formValidate.noiDung}}
+        </div>          
+    </form>
+</div>
